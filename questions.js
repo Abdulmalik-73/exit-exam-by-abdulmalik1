@@ -256,6 +256,7 @@ const questions = [
     text: "The process that converts a value of one data type to another data type is referred to as:",
     options: ["Moving", "Typecasting", "Casting conversion", "B and C are answers"],
     answer: 3,
+    explanation: "Both 'Typecasting' and 'Casting conversion' refer to the same process of converting a value from one data type to another (e.g., converting an integer to a string, or a float to an integer). These terms are used interchangeably in programming."
   },
   {
     id: 25, course: "Internet Programming", theme: "Theme 1",
@@ -263,6 +264,7 @@ const questions = [
     text: "Which JavaScript method displays a dialog box with a message and only an OK button?",
     options: ["confirm()", "prompt()", "alert()", "dialog()"],
     answer: 2,
+    explanation: "The alert() method displays a simple dialog box with a message and an OK button. confirm() shows OK and Cancel buttons, prompt() allows user input, and dialog() is not a standard JavaScript method."
   },
   {
     id: 26, course: "Internet Programming", theme: "Theme 1",
@@ -270,6 +272,7 @@ const questions = [
     text: "Which HTTP status code indicates that a requested web page was NOT found on the server?",
     options: ["200", "301", "403", "404"],
     answer: 3,
+    explanation: "HTTP status code 404 means 'Not Found' - the server cannot find the requested resource. 200 means 'OK' (success), 301 means 'Moved Permanently' (redirect), and 403 means 'Forbidden' (access denied)."
   },
 
   // ─── THEME 2: Computer Networking and Information Security ────────────────
@@ -280,6 +283,7 @@ const questions = [
     text: "Which network device operates at Layer 3 of the OSI model and routes packets between different networks?",
     options: ["Hub", "Switch", "Router", "Bridge"],
     answer: 2,
+    explanation: "A Router operates at Layer 3 (Network Layer) of the OSI model and makes routing decisions based on IP addresses to forward packets between different networks. Hubs operate at Layer 1, Switches at Layer 2, and Bridges at Layer 2."
   },
   {
     id: 28, course: "Data Communication & Networks", theme: "Theme 2",
@@ -287,6 +291,7 @@ const questions = [
     text: "What is the standard port number used by the HTTP protocol?",
     options: ["21", "25", "80", "443"],
     answer: 2,
+    explanation: "HTTP (Hypertext Transfer Protocol) uses port 80 by default. Port 21 is for FTP, port 25 is for SMTP (email), and port 443 is for HTTPS (secure HTTP)."
   },
   {
     id: 29, course: "Data Communication & Networks", theme: "Theme 2",
@@ -294,6 +299,7 @@ const questions = [
     text: "Which protocol is responsible for automatically assigning IP addresses to devices joining a network?",
     options: ["DNS", "DHCP", "ARP", "SMTP"],
     answer: 1,
+    explanation: "DHCP (Dynamic Host Configuration Protocol) automatically assigns IP addresses, subnet masks, default gateways, and DNS servers to devices on a network. DNS translates domain names to IPs, ARP maps IP to MAC addresses, and SMTP is for email."
   },
   {
     id: 30, course: "Data Communication & Networks", theme: "Theme 2",
@@ -301,6 +307,7 @@ const questions = [
     text: "Which OSI model layer is responsible for end-to-end delivery, error correction, and flow control?",
     options: ["Network layer (Layer 3)", "Data Link layer (Layer 2)", "Transport layer (Layer 4)", "Session layer (Layer 5)"],
     answer: 2,
+    explanation: "The Transport Layer (Layer 4) provides end-to-end communication, error detection and correction, flow control, and segmentation. TCP and UDP operate at this layer. Layer 3 handles routing, Layer 2 handles frame delivery, and Layer 5 manages sessions."
   },
   {
     id: 31, course: "Data Communication & Networks", theme: "Theme 2",
@@ -308,6 +315,7 @@ const questions = [
     text: "A network administrator subnets 192.168.1.0 using a /26 prefix. How many USABLE host addresses are available per subnet?",
     options: ["30", "62", "126", "254"],
     answer: 1,
+    explanation: "A /26 subnet mask provides 2^6 = 64 total addresses per subnet. Subtracting 2 (network address and broadcast address) gives 62 usable host addresses. The formula is 2^(32-26) - 2 = 64 - 2 = 62."
   },
   {
     id: 32, course: "Data Communication & Networks", theme: "Theme 2",
@@ -315,6 +323,7 @@ const questions = [
     text: "In which data transmission mode can data flow in BOTH directions simultaneously?",
     options: ["Simplex", "Half-duplex", "Full-duplex", "Multiplex"],
     answer: 2,
+    explanation: "Full-duplex allows simultaneous bidirectional data transmission (both directions at the same time), like a telephone conversation. Simplex is one-way only, half-duplex is bidirectional but only one direction at a time (like walkie-talkies)."
   },
   {
     id: 33, course: "Data Communication & Networks", theme: "Theme 2",
@@ -327,6 +336,7 @@ const questions = [
       "128.0.0.0 – 191.255.255.255",
     ],
     answer: 2,
+    explanation: "Private IP address ranges defined by RFC 1918 are: 10.0.0.0 to 10.255.255.255 (Class A), 172.16.0.0 to 172.31.255.255 (Class B), and 192.168.0.0 to 192.168.255.255 (Class C). These addresses are not routable on the public internet."
   },
   {
     id: 34, course: "Data Communication & Networks", theme: "Theme 2",
@@ -339,6 +349,7 @@ const questions = [
       "Encrypt data for secure transmission",
     ],
     answer: 1,
+    explanation: "DNS (Domain Name System) translates human-readable domain names (like www.google.com) into IP addresses (like 142.250.185.46) that computers use to identify each other on the network. It acts as the internet's phone book."
   },
 
   // Course 5: Information System Security (8 questions)
@@ -353,6 +364,7 @@ const questions = [
       "Computer Internet Access",
     ],
     answer: 1,
+    explanation: "The CIA triad represents the three core principles of information security: Confidentiality (protecting data from unauthorized access), Integrity (ensuring data accuracy and preventing unauthorized modification), and Availability (ensuring authorized users can access data when needed)."
   },
   {
     id: 36, course: "Information System Security", theme: "Theme 2",
@@ -365,6 +377,7 @@ const questions = [
       "Phishing attack",
     ],
     answer: 2,
+    explanation: "A Denial of Service (DoS) attack floods a target system with excessive traffic or requests, consuming resources and making the system unavailable to legitimate users. DDoS (Distributed DoS) uses multiple sources to amplify the attack."
   },
   {
     id: 37, course: "Information System Security", theme: "Theme 2",
@@ -377,6 +390,7 @@ const questions = [
       "Asymmetric encryption cannot be used for digital signatures.",
     ],
     answer: 1,
+    explanation: "Symmetric encryption uses a single shared key for both encryption and decryption (like AES, DES). Asymmetric encryption uses a key pair: a public key for encryption and a private key for decryption (like RSA). Asymmetric is slower but more secure for key exchange."
   },
   {
     id: 38, course: "Information System Security", theme: "Theme 2",
@@ -384,6 +398,7 @@ const questions = [
     text: "Which type of social engineering attack involves sending fraudulent emails that appear to be from a legitimate organization in order to steal user credentials?",
     options: ["Baiting", "Tailgating", "Phishing", "Pretexting"],
     answer: 2,
+    explanation: "Phishing is a social engineering attack where attackers send fraudulent emails or messages that appear to be from trusted sources (banks, companies) to trick victims into revealing sensitive information like passwords or credit card numbers."
   },
   {
     id: 39, course: "Information System Security", theme: "Theme 2",
@@ -391,6 +406,7 @@ const questions = [
     text: "A user receives an email claiming to be from their bank, asking them to click a link and enter their login credentials. This is an example of:",
     options: ["Malware attack", "SQL Injection", "Phishing", "Denial of Service attack"],
     answer: 2,
+    explanation: "This is a classic phishing attack. The attacker impersonates a trusted entity (the bank) to trick the user into revealing sensitive credentials. Users should never click links in unsolicited emails and should always verify by contacting the organization directly."
   },
   {
     id: 40, course: "Information System Security", theme: "Theme 2",
@@ -398,6 +414,207 @@ const questions = [
     text: "Which of the following BEST describes a passive attack on an information system?",
     options: [
       "Modifying data in transit between two communicating parties",
+      "Eavesdropping on network traffic to capture sensitive information WITHOUT altering it",
+      "Flooding a server with requests to make it unavailable",
+      "Injecting malicious code into a web application",
+    ],
+    answer: 1,
+    explanation: "A passive attack involves monitoring or eavesdropping on communications to gather information without modifying the data. Examples include packet sniffing and traffic analysis. Active attacks involve modifying data, injecting code, or disrupting services."
+  },
+  {
+    id: 41, course: "Information System Security", theme: "Theme 2",
+    level: "Understanding",
+    text: "What is a firewall's primary function in network security?",
+    options: [
+      "Encrypt all data passing through the network",
+      "Monitor and control incoming and outgoing network traffic based on security rules",
+      "Detect and remove viruses from files",
+      "Backup all network data automatically",
+    ],
+    answer: 1,
+    explanation: "A firewall monitors and controls network traffic based on predetermined security rules, acting as a barrier between trusted internal networks and untrusted external networks. It can block or allow traffic based on IP addresses, ports, and protocols."
+  },
+  {
+    id: 42, course: "Information System Security", theme: "Theme 2",
+    level: "Application",
+    text: "Which security measure would BEST protect against SQL injection attacks?",
+    options: [
+      "Using strong passwords",
+      "Installing antivirus software",
+      "Using parameterized queries (prepared statements)",
+      "Encrypting the database",
+    ],
+    answer: 2,
+    explanation: "Parameterized queries (prepared statements) separate SQL code from user input, preventing attackers from injecting malicious SQL commands. This is the most effective defense against SQL injection attacks, which occur when user input is directly concatenated into SQL queries."
+  },
+
+  // ─── THEME 3: Database and Information Systems ────────────────────────────
+  // Course 6: Database Systems (8 questions)
+  {
+    id: 43, course: "Database Systems", theme: "Theme 3",
+    level: "Remember",
+    text: "Which SQL command is used to retrieve data from a database table?",
+    options: ["INSERT", "UPDATE", "SELECT", "DELETE"],
+    answer: 2,
+    explanation: "SELECT is the SQL command used to query and retrieve data from database tables. INSERT adds new records, UPDATE modifies existing records, and DELETE removes records."
+  },
+  {
+    id: 44, course: "Database Systems", theme: "Theme 3",
+    level: "Remember",
+    text: "What does ACID stand for in database transaction management?",
+    options: [
+      "Atomicity, Consistency, Isolation, Durability",
+      "Authentication, Consistency, Integration, Durability",
+      "Atomicity, Concurrency, Isolation, Data",
+      "Authentication, Concurrency, Integrity, Distribution",
+    ],
+    answer: 0,
+    explanation: "ACID represents the four key properties that guarantee reliable database transactions: Atomicity (all-or-nothing execution), Consistency (database remains in valid state), Isolation (concurrent transactions don't interfere), and Durability (committed changes persist even after system failure)."
+  },
+  {
+    id: 45, course: "Database Systems", theme: "Theme 3",
+    level: "Understanding",
+    text: "Which normal form eliminates partial dependencies — where a non-key attribute depends on only PART of a composite primary key?",
+    options: [
+      "First Normal Form (1NF)",
+      "Second Normal Form (2NF)",
+      "Third Normal Form (3NF)",
+      "Boyce-Codd Normal Form (BCNF)",
+    ],
+    answer: 1,
+    explanation: "Second Normal Form (2NF) eliminates partial dependencies by ensuring that all non-key attributes depend on the entire primary key, not just part of it. This applies when you have a composite primary key. 1NF eliminates repeating groups, 3NF eliminates transitive dependencies."
+  },
+  {
+    id: 46, course: "Database Systems", theme: "Theme 3",
+    level: "Understanding",
+    text: "In an Entity-Relationship (ER) diagram, what does a double rectangle represent?",
+    options: [
+      "Strong entity",
+      "Weak entity",
+      "Derived attribute",
+      "Multi-valued attribute",
+    ],
+    answer: 1,
+    explanation: "A double rectangle represents a weak entity - an entity that cannot exist independently and depends on a strong entity for its existence. For example, a 'Room' entity might be weak and depend on a 'Building' entity. Strong entities use single rectangles."
+  },
+  {
+    id: 47, course: "Database Systems", theme: "Theme 3",
+    level: "Application",
+    text: "Which SQL clause is used to filter groups of records based on a condition AFTER the GROUP BY clause is applied?",
+    options: ["WHERE", "HAVING", "ORDER BY", "FILTER"],
+    answer: 1,
+    explanation: "HAVING filters groups after GROUP BY is applied and can use aggregate functions (like COUNT, SUM). WHERE filters individual rows before grouping and cannot use aggregate functions. Example: SELECT dept, COUNT(*) FROM employees GROUP BY dept HAVING COUNT(*) > 5;"
+  },
+  {
+    id: 48, course: "Database Systems", theme: "Theme 3",
+    level: "Analysis",
+    text: "A table contains StudentID, CourseID, StudentName, InstructorName, and InstructorOffice. The FDs are: StudentID→StudentName and InstructorName→InstructorOffice. What normalization violation does this represent?",
+    options: [
+      "1NF violation — multi-valued cells present",
+      "2NF violation — partial dependency exists",
+      "3NF violation — transitive dependency exists",
+      "BCNF violation only",
+    ],
+    answer: 2,
+    explanation: "This is a 3NF violation due to transitive dependency. InstructorOffice depends on InstructorName, which is not a key. The dependency chain is: (StudentID, CourseID) → InstructorName → InstructorOffice. To fix this, separate instructor information into its own table."
+  },
+  {
+    id: 49, course: "Database Systems", theme: "Theme 3",
+    level: "Understanding",
+    text: "Which type of SQL JOIN returns ALL records from the LEFT table and the matching records from the right table (NULL if no match)?",
+    options: ["INNER JOIN", "RIGHT JOIN", "LEFT JOIN", "FULL OUTER JOIN"],
+    answer: 2,
+    explanation: "LEFT JOIN (or LEFT OUTER JOIN) returns all records from the left table and matching records from the right table. If there's no match, NULL values are returned for right table columns. INNER JOIN only returns matching records, RIGHT JOIN returns all from right table."
+  },
+  {
+    id: 50, course: "Database Systems", theme: "Theme 3",
+    level: "Analysis",
+    text: "Which concurrency problem occurs when a transaction reads data that has been modified but NOT yet committed by another transaction, which may later be rolled back?",
+    options: ["Lost update", "Dirty read", "Unrepeatable read", "Phantom read"],
+    answer: 1,
+    explanation: "A dirty read occurs when a transaction reads uncommitted changes from another transaction. If the other transaction rolls back, the first transaction has read invalid data. Lost update is when concurrent updates overwrite each other, unrepeatable read is when data changes between reads, phantom read is when new rows appear."
+  },
+
+  // Course 7: Information Storage and Retrieval (8 questions)
+  {
+    id: 51, course: "Information Storage & Retrieval", theme: "Theme 3",
+    level: "Remember",
+    text: "What is an inverted index in an information retrieval system?",
+    options: [
+      "A list of documents stored in reverse chronological order",
+      "A data structure that maps each unique term to the list of documents containing it",
+      "An index that stores documents in descending order of relevance",
+      "A compressed version of the document collection",
+    ],
+    answer: 1,
+    explanation: "An inverted index is a data structure that maps each unique term (word) to a list of documents containing that term, along with positions. This enables fast full-text search. For example: 'database' → [doc1, doc5, doc12]. It's called 'inverted' because it inverts the document-to-term relationship."
+  },
+  {
+    id: 52, course: "Information Storage & Retrieval", theme: "Theme 3",
+    level: "Remember",
+    text: "Which text pre-processing step removes very common, non-informative words such as 'the', 'is', and 'a' from documents before indexing?",
+    options: ["Stemming", "Tokenization", "Stop word removal", "Lemmatization"],
+    answer: 2,
+    explanation: "Stop word removal eliminates common words (like 'the', 'is', 'a', 'an') that appear frequently but carry little meaning for search. This reduces index size and improves search efficiency. Stemming reduces words to root form, tokenization splits text into words, lemmatization converts to dictionary form."
+  },
+  {
+    id: 53, course: "Information Storage & Retrieval", theme: "Theme 3",
+    level: "Understanding",
+    text: "What does PRECISION measure in an information retrieval evaluation?",
+    options: [
+      "The fraction of ALL relevant documents that were retrieved",
+      "The fraction of RETRIEVED documents that are actually relevant",
+      "The total number of documents in the entire collection",
+      "The speed of the retrieval system in seconds",
+    ],
+    answer: 1,
+    explanation: "Precision measures the fraction of retrieved documents that are relevant: Precision = (Relevant Retrieved) / (Total Retrieved). It answers 'Of what I retrieved, how much was useful?' High precision means few false positives. Recall measures the fraction of all relevant documents that were retrieved."
+  },
+  {
+    id: 54, course: "Information Storage & Retrieval", theme: "Theme 3",
+    level: "Understanding",
+    text: "What is the purpose of TF-IDF weighting in information retrieval?",
+    options: [
+      "To compress document files for storage efficiency",
+      "To measure the importance of a term in a specific document relative to its frequency across the whole collection",
+      "To remove duplicate documents from the index",
+      "To translate natural language queries into SQL",
+    ],
+    answer: 1,
+    explanation: "TF-IDF (Term Frequency-Inverse Document Frequency) weights terms based on how frequently they appear in a document (TF) and how rare they are across all documents (IDF). Terms that appear often in one document but rarely in others get high weights, making them good discriminators for relevance ranking."
+  },
+  {
+    id: 55, course: "Information Storage & Retrieval", theme: "Theme 3",
+    level: "Application",
+    text: "An IR system retrieves 8 documents for a query. 6 of those retrieved documents are relevant. There are 10 relevant documents in total. What is the RECALL?",
+    options: ["0.75", "0.60", "0.80", "0.50"],
+    answer: 1,
+    explanation: "Recall = (Relevant Retrieved) / (Total Relevant) = 6 / 10 = 0.60 or 60%. Recall measures what fraction of all relevant documents were found. In this case, the system found 6 out of 10 relevant documents."
+  },
+  {
+    id: 56, course: "Information Storage & Retrieval", theme: "Theme 3",
+    level: "Application",
+    text: "Using the same data from the previous question (8 retrieved, 6 relevant among retrieved, 10 total relevant), what is the PRECISION?",
+    options: ["0.60", "0.75", "0.80", "0.50"],
+    answer: 1,
+    explanation: "Precision = (Relevant Retrieved) / (Total Retrieved) = 6 / 8 = 0.75 or 75%. Precision measures what fraction of retrieved documents are relevant. In this case, 6 out of 8 retrieved documents were relevant."
+  },
+  {
+    id: 57, course: "Information Storage & Retrieval", theme: "Theme 3",
+    level: "Analysis",
+    text: "A search engine retrieves 100 documents. 40 are relevant. There are 200 relevant documents in the whole collection. What is the F1-score? (Precision=0.40, Recall=0.20)",
+    options: ["0.40", "0.20", "0.267", "0.533"],
+    answer: 2,
+    explanation: "F1-score is the harmonic mean of precision and recall: F1 = 2 × (Precision × Recall) / (Precision + Recall) = 2 × (0.40 × 0.20) / (0.40 + 0.20) = 2 × 0.08 / 0.60 = 0.16 / 0.60 = 0.267. F1-score balances precision and recall into a single metric."
+  },
+  {
+    id: 58, course: "Information Storage & Retrieval", theme: "Theme 3",
+    level: "Understanding",
+    text: "Which information retrieval model represents both documents and queries as vectors in a multi-dimensional space and uses cosine similarity for ranking?",
+    options: ["Boolean model", "Probabilistic model", "Vector Space Model (VSM)", "Relational model"],
+    answer: 2,
+    explanation: "The Vector Space Model (VSM) represents documents and queries as vectors in a multi-dimensional space where each dimension corresponds to a term. Similarity is measured using cosine similarity between vectors. This allows for ranked retrieval, unlike the Boolean model which only returns exact matches."
+  },
       "Flooding a server with requests to make it unavailable",
       "Observing and capturing data without altering it",
       "Injecting malicious SQL code into a database query",
@@ -593,6 +810,7 @@ const questions = [
       "The color depth (bits per color) of an image",
     ],
     answer: 1,
+    explanation: "A pixel (picture element) is the smallest addressable unit of a digital image. Each pixel represents a single point of color. An image is composed of a grid of pixels, and the total number of pixels determines the image resolution (e.g., 1920×1080 = 2,073,600 pixels)."
   },
   {
     id: 60, course: "Multimedia Information Systems", theme: "Theme 3",
@@ -600,6 +818,7 @@ const questions = [
     text: "Which image file format uses LOSSY compression and is best suited for storing photographs?",
     options: ["PNG", "GIF", "BMP", "JPEG"],
     answer: 3,
+    explanation: "JPEG (Joint Photographic Experts Group) uses lossy compression, which reduces file size by discarding some image data that is less noticeable to the human eye. This makes it ideal for photographs. PNG uses lossless compression, GIF is limited to 256 colors, and BMP is uncompressed."
   },
   {
     id: 61, course: "Multimedia Information Systems", theme: "Theme 3",
@@ -612,6 +831,7 @@ const questions = [
       "Vector images are always larger in file size than equivalent raster images.",
     ],
     answer: 1,
+    explanation: "Raster (bitmap) images are composed of a grid of pixels and lose quality (pixelate) when scaled up. Vector images use mathematical equations to define shapes, lines, and curves, allowing them to scale infinitely without quality loss. Logos and illustrations are typically vector; photos are raster."
   },
   {
     id: 62, course: "Multimedia Information Systems", theme: "Theme 3",
@@ -619,6 +839,7 @@ const questions = [
     text: "Calculate the uncompressed file size of a 1920×1080 pixel image with 24-bit color depth.",
     options: ["1.44 MB", "3.0 MB", "5.93 MB", "10.09 MB"],
     answer: 2,
+    explanation: "File size = Width × Height × (Bits per pixel / 8) = 1920 × 1080 × (24/8) = 1920 × 1080 × 3 = 6,220,800 bytes = 5.93 MB. The 24-bit color depth means 8 bits each for Red, Green, and Blue channels."
   },
   {
     id: 63, course: "Multimedia Information Systems", theme: "Theme 3",
@@ -626,6 +847,7 @@ const questions = [
     text: "In MPEG video compression, which frame type stores a COMPLETE image and does NOT reference any other frames?",
     options: ["P-frame (Predictive frame)", "B-frame (Bidirectional frame)", "I-frame (Intra-coded frame)", "D-frame (Delta frame)"],
     answer: 2,
+    explanation: "I-frames (Intra-coded frames) are complete, standalone images that don't reference other frames. They serve as reference points for P-frames (which predict from previous frames) and B-frames (which predict from both previous and future frames). I-frames enable random access and error recovery in video streams."
   },
   {
     id: 64, course: "Multimedia Information Systems", theme: "Theme 3",
@@ -633,6 +855,7 @@ const questions = [
     text: "Which color model is used for PRINTING, based on subtractive color mixing (absorbing light)?",
     options: ["RGB", "HSV", "CMYK", "YIQ"],
     answer: 2,
+    explanation: "CMYK (Cyan, Magenta, Yellow, Black/Key) is used for printing and uses subtractive color mixing - inks absorb (subtract) certain wavelengths of light. RGB (Red, Green, Blue) is additive and used for screens. HSV is Hue-Saturation-Value, and YIQ is used in television broadcasting."
   },
   {
     id: 65, course: "Multimedia Information Systems", theme: "Theme 3",
@@ -640,6 +863,7 @@ const questions = [
     text: "What is the uncompressed size of 1 minute of CD-quality stereo audio? (44,100 Hz, 16-bit depth, 2 channels)",
     options: ["5 MB", "10.09 MB", "22 MB", "2.5 MB"],
     answer: 1,
+    explanation: "Size = Sample Rate × Bit Depth × Channels × Time / 8 = 44,100 × 16 × 2 × 60 / 8 = 10,584,000 bytes = 10.09 MB. CD-quality audio samples 44,100 times per second, with 16 bits per sample, across 2 channels (stereo)."
   },
   {
     id: 66, course: "Multimedia Information Systems", theme: "Theme 3",
@@ -652,6 +876,7 @@ const questions = [
       "Discrete Cosine Transform (DCT)",
     ],
     answer: 2,
+    explanation: "Huffman encoding is a lossless compression algorithm that assigns variable-length codes based on symbol frequency - frequent symbols get shorter codes, rare symbols get longer codes. This minimizes the average code length. RLE compresses repeated sequences, LZW uses dictionary-based compression, and DCT is used in lossy compression (JPEG)."
   },
 
   // ─── THEME 4: Intelligent Systems ────────────────────────────────────────
@@ -667,6 +892,7 @@ const questions = [
       "Program, Environment, Automation, System",
     ],
     answer: 0,
+    explanation: "PEAS stands for Performance measure (how success is evaluated), Environment (the world the agent operates in), Actuators (how the agent acts on the environment), and Sensors (how the agent perceives the environment). This framework helps specify the task environment for an intelligent agent."
   },
   {
     id: 68, course: "Fundamentals of Artificial Intelligence", theme: "Theme 4",
@@ -679,6 +905,7 @@ const questions = [
       "Utility-based agent",
     ],
     answer: 1,
+    explanation: "Model-based reflex agents maintain an internal state that tracks aspects of the world that are not currently visible. This allows them to handle partially observable environments by keeping a model of how the world works and updating it based on sensor input. Simple reflex agents only react to current percepts."
   },
   {
     id: 69, course: "Fundamentals of Artificial Intelligence", theme: "Theme 4",
@@ -691,6 +918,7 @@ const questions = [
       "DFS is optimal for finding shortest paths; BFS is not.",
     ],
     answer: 0,
+    explanation: "BFS explores nodes level by level (breadth-first) using a queue data structure, guaranteeing the shortest path in unweighted graphs. DFS explores as deep as possible along each branch using a stack, which may not find the shortest path. BFS is complete and optimal for unweighted graphs; DFS is not optimal."
   },
   {
     id: 70, course: "Fundamentals of Artificial Intelligence", theme: "Theme 4",
@@ -698,6 +926,7 @@ const questions = [
     text: "In A* search, if the actual cost from start to node n is g(n)=5 and the estimated cost to the goal is h(n)=8, what is the total evaluation function f(n)?",
     options: ["3", "8", "13", "40"],
     answer: 2,
+    explanation: "In A* search, the evaluation function is f(n) = g(n) + h(n), where g(n) is the actual cost from start to node n, and h(n) is the heuristic estimate from n to the goal. Therefore, f(n) = 5 + 8 = 13. A* uses this to prioritize which nodes to explore."
   },
   {
     id: 71, course: "Fundamentals of Artificial Intelligence", theme: "Theme 4",
@@ -710,6 +939,7 @@ const questions = [
       "Utility-based agent",
     ],
     answer: 3,
+    explanation: "A utility-based agent is most appropriate because it can balance multiple conflicting objectives (safety, speed, comfort, compliance) by assigning utility values to different states and choosing actions that maximize expected utility. Simple reflex and model-based agents can't handle trade-offs, and goal-based agents only achieve goals without optimization."
   },
   {
     id: 72, course: "Fundamentals of Artificial Intelligence", theme: "Theme 4",
@@ -722,6 +952,7 @@ const questions = [
       "It can process more data per second than the human brain.",
     ],
     answer: 1,
+    explanation: "The Turing Test evaluates machine intelligence based on its ability to exhibit intelligent behavior indistinguishable from a human. If a human interrogator cannot reliably distinguish the machine from a human through text-based conversation, the machine is considered to have passed the test. It's about behavioral intelligence, not computational power."
   },
 
   // Course 10: Knowledge Management (6 questions)

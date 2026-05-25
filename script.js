@@ -1,18 +1,53 @@
 // Load questions from the questions array
 let currentQuestion = 0; // Starting at question 1 (index 0)
 let userAnswers = {};
-let timeRemaining = 9000; // 2:30:00 in seconds (2.5 hours)
+let timeRemaining = 9000; // 2:30:00 in seconds (150 minutes = 9000 seconds)
 let timerInterval;
+let examStarted = false;
 
 // Initialize the exam
 document.addEventListener('DOMContentLoaded', function() {
     if (typeof questions !== 'undefined' && questions.length > 0) {
         initializeExam();
-        startTimer();
+        // Display initial time but don't start counting
+        updateTimerDisplay();
     } else {
         console.error('Questions not loaded');
     }
 });
+
+function startExam() {
+    if (!examStarted) {
+        examStarted = true;
+        startTimer();
+        
+        // Hide the Start Exam button
+        const startBtn = document.getElementById('startExamBtn');
+        if (startBtn) {
+            startBtn.style.display = 'none';
+        }
+        
+        // Enable all exam controls
+        enableExamControls();
+        
+        // Update status bar to show exam is in progress
+        updateStatusBar();
+    }
+}
+
+function updateStatusBar() {
+    const statusContent = document.querySelector('.status-content');
+    
+    if (statusContent) {
+        if (examStarted) {
+            statusContent.innerHTML = `
+                <span class="status-icon">📝</span> Exam in Progress — Score: <span id="score">0</span> / <span id="total">120</span> (<span id="percentage">0%</span>) | Answered: <span id="answered">0</span> / <span id="totalQuestions">120</span>
+            `;
+        }
+        // Update the stats after changing the HTML
+        updateStats();
+    }
+}
 
 function initializeExam() {
     // Generate question navigation grid
@@ -26,6 +61,43 @@ function initializeExam() {
     
     // Set total questions
     document.getElementById('totalQuestions2').textContent = questions.length;
+    
+    // Disable all interactive elements until exam starts
+    disableExamControls();
+}
+
+function disableExamControls() {
+    // Add disabled class to all navigation buttons
+    const navButtons = document.querySelectorAll('.nav-btn, .mobile-nav-btn');
+    navButtons.forEach(btn => {
+        btn.classList.add('exam-not-started');
+    });
+    
+    // Add disabled class to show answer button
+    const showAnswerBtn = document.getElementById('showAnswerBtn');
+    if (showAnswerBtn) {
+        showAnswerBtn.classList.add('exam-not-started');
+    }
+    
+    // Add disabled class to all question grid buttons
+    const questionBtns = document.querySelectorAll('.question-btn');
+    questionBtns.forEach(btn => {
+        btn.classList.add('exam-not-started');
+    });
+    
+    // Add disabled class to all options
+    const options = document.querySelectorAll('.option');
+    options.forEach(option => {
+        option.classList.add('exam-not-started');
+    });
+}
+
+function enableExamControls() {
+    // Remove disabled class from all elements
+    const disabledElements = document.querySelectorAll('.exam-not-started');
+    disabledElements.forEach(element => {
+        element.classList.remove('exam-not-started');
+    });
 }
 
 function generateQuestionGrid() {
@@ -148,12 +220,24 @@ function updateNavigationButtons() {
 }
 
 function selectOption(questionIndex, optionIndex) {
+    // Only allow selection if exam has started
+    if (!examStarted) {
+        alert('Please click "Start Exam" button to begin the exam.');
+        return;
+    }
+    
     userAnswers[questionIndex] = optionIndex;
     displayQuestion(questionIndex);
     updateStats();
 }
 
 function clearAnswer() {
+    // Only allow clearing if exam has started
+    if (!examStarted) {
+        alert('Please click "Start Exam" button to begin the exam.');
+        return;
+    }
+    
     if (userAnswers[currentQuestion] !== undefined) {
         delete userAnswers[currentQuestion];
         displayQuestion(currentQuestion);
@@ -163,6 +247,12 @@ function clearAnswer() {
 
 // Show/Hide Answer and Explanation
 function toggleAnswer() {
+    // Only allow showing answer if exam has started
+    if (!examStarted) {
+        alert('Please click "Start Exam" button to begin the exam.');
+        return;
+    }
+    
     const answerDiv = document.getElementById('answerExplanation');
     const showBtn = document.getElementById('showAnswerBtn');
     const question = questions[currentQuestion];
@@ -195,6 +285,12 @@ function toggleAnswer() {
 
 // Submit Exam Functions
 function submitExam() {
+    // Only allow submission if exam has started
+    if (!examStarted) {
+        alert('Please click "Start Exam" button to begin the exam.');
+        return;
+    }
+    
     const answeredCount = Object.keys(userAnswers).length;
     const unansweredCount = questions.length - answeredCount;
     
@@ -250,13 +346,22 @@ function closeResultsModal() {
 }
 
 function goToQuestion(index) {
+    // Only allow navigation if exam has started
+    if (!examStarted) {
+        alert('Please click "Start Exam" button to begin the exam.');
+        return;
+    }
+    
     displayQuestion(index);
 }
 
 function updateStats() {
     const answered = Object.keys(userAnswers).length;
-    document.getElementById('answered').textContent = answered;
-    document.getElementById('totalQuestions').textContent = questions.length;
+    const answeredElement = document.getElementById('answered');
+    const totalQuestionsElement = document.getElementById('totalQuestions');
+    
+    if (answeredElement) answeredElement.textContent = answered;
+    if (totalQuestionsElement) totalQuestionsElement.textContent = questions.length;
     
     // Calculate score (for demo - would only show after submission)
     let score = 0;
@@ -266,9 +371,13 @@ function updateStats() {
         }
     });
     
-    document.getElementById('score').textContent = score;
-    document.getElementById('total').textContent = questions.length;
-    document.getElementById('percentage').textContent = ((score / questions.length) * 100).toFixed(1) + '%';
+    const scoreElement = document.getElementById('score');
+    const totalElement = document.getElementById('total');
+    const percentageElement = document.getElementById('percentage');
+    
+    if (scoreElement) scoreElement.textContent = score;
+    if (totalElement) totalElement.textContent = questions.length;
+    if (percentageElement) percentageElement.textContent = ((score / questions.length) * 100).toFixed(1) + '%';
 }
 
 function startTimer() {
@@ -295,12 +404,24 @@ function updateTimerDisplay() {
 
 // Navigation functions
 function previousQuestion() {
+    // Only allow navigation if exam has started
+    if (!examStarted) {
+        alert('Please click "Start Exam" button to begin the exam.');
+        return;
+    }
+    
     if (currentQuestion > 0) {
         displayQuestion(currentQuestion - 1);
     }
 }
 
 function nextQuestion() {
+    // Only allow navigation if exam has started
+    if (!examStarted) {
+        alert('Please click "Start Exam" button to begin the exam.');
+        return;
+    }
+    
     if (currentQuestion < questions.length - 1) {
         displayQuestion(currentQuestion + 1);
     }

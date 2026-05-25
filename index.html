@@ -28,14 +28,21 @@
         <!-- Title Bar -->
         <div class="title-bar">
             <h2>Information System — Exit Exam</h2>
-            <div class="timer" id="timer">
-                <span class="timer-icon">⏱</span> Time left: <span id="timeDisplay">2:22:32</span>
+            <div class="timer-section">
+                <div class="timer" id="timer">
+                    <span class="timer-icon">⏱</span> Time left: <span id="timeDisplay">2:30:00</span>
+                </div>
+                <button class="start-exam-btn" id="startExamBtn" onclick="startExam()">
+                    Start Exam
+                </button>
             </div>
         </div>
 
         <!-- Status Bar -->
         <div class="status-bar" id="statusBar">
-            <span class="status-icon">✓</span> Exam Submitted — Your Score: <span id="score">7</span> / <span id="total">120</span> (<span id="percentage">5.8%</span>) | Answered: <span id="answered">9</span> / <span id="totalQuestions">120</span>
+            <div class="status-content">
+                <span class="status-icon">📝</span> Exam Ready — Score: <span id="score">0</span> / <span id="total">120</span> (<span id="percentage">0%</span>) | Answered: <span id="answered">0</span> / <span id="totalQuestions">120</span>
+            </div>
         </div>
 
         <!-- Main Content -->

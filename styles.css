@@ -82,6 +82,12 @@ body {
     font-weight: 600;
 }
 
+.timer-section {
+    display: flex;
+    align-items: center;
+    gap: 15px;
+}
+
 .timer {
     background-color: #dc3545;
     padding: 10px 20px;
@@ -94,6 +100,29 @@ body {
     font-size: 18px;
 }
 
+.start-exam-btn {
+    background-color: #007bff;
+    color: white;
+    border: none;
+    padding: 10px 24px;
+    border-radius: 6px;
+    font-size: 16px;
+    font-weight: 600;
+    cursor: pointer;
+    transition: all 0.2s;
+    white-space: nowrap;
+}
+
+.start-exam-btn:hover {
+    background-color: #0056b3;
+    transform: translateY(-1px);
+    box-shadow: 0 2px 8px rgba(0,123,255,0.3);
+}
+
+.start-exam-btn:active {
+    transform: translateY(0);
+}
+
 /* Status Bar */
 .status-bar {
     background-color: #28a745;
@@ -101,11 +130,30 @@ body {
     padding: 15px 30px;
     font-size: 15px;
     font-weight: 500;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.status-content {
+    flex: 1;
 }
 
 .status-icon {
     font-size: 18px;
     margin-right: 5px;
+}
+
+/* Disabled state before exam starts */
+.exam-not-started {
+    opacity: 0.5;
+    cursor: not-allowed !important;
+    pointer-events: none;
+}
+
+.option.exam-not-started:hover {
+    border-color: #ddd !important;
+    background-color: #f8f9fa !important;
 }
 
 /* Main Content */
@@ -121,37 +169,38 @@ body {
     background-color: white;
 }
 
+/* Theme Header */
 .theme-header {
     display: flex;
     align-items: center;
-    gap: 15px;
-    margin-bottom: 20px;
+    gap: 12px;
+    margin-bottom: 15px;
     flex-wrap: wrap;
 }
 
 .theme-badge {
     background-color: #0066ff;
     color: white;
-    padding: 8px 16px;
-    border-radius: 5px;
+    padding: 6px 14px;
+    border-radius: 4px;
     font-weight: 600;
-    font-size: 14px;
+    font-size: 13px;
 }
 
 .course-name {
     color: #666;
-    font-size: 15px;
+    font-size: 14px;
 }
 
 .remember-btn {
     background-color: white;
     border: 2px solid #0066ff;
     color: #0066ff;
-    padding: 6px 16px;
-    border-radius: 5px;
+    padding: 5px 14px;
+    border-radius: 4px;
     cursor: pointer;
     font-weight: 600;
-    font-size: 14px;
+    font-size: 13px;
 }
 
 .remember-btn:hover {
@@ -172,8 +221,8 @@ body {
 
 .question-text {
     font-size: 16px;
-    margin-bottom: 20px;
-    line-height: 1.6;
+    margin-bottom: 15px;
+    line-height: 1.5;
 }
 
 .question-text strong {
@@ -184,15 +233,15 @@ body {
 .options-container {
     display: flex;
     flex-direction: column;
-    gap: 12px;
+    gap: 10px;
 }
 
 .option {
     display: flex;
     align-items: center;
-    padding: 15px 20px;
+    padding: 12px 15px;
     border: 2px solid #ddd;
-    border-radius: 8px;
+    border-radius: 6px;
     cursor: pointer;
     transition: all 0.2s;
     background-color: #f8f9fa;
@@ -299,35 +348,35 @@ body {
 .mobile-navigation-section {
     display: none;
     background-color: white;
-    padding: 15px;
-    border-radius: 8px;
+    padding: 10px;
+    border-radius: 6px;
     box-shadow: 0 2px 4px rgba(0,0,0,0.1);
-    margin: 15px 0;
+    margin: 10px 0;
 }
 
 .mobile-navigation-section h3 {
-    font-size: 16px;
+    font-size: 14px;
     color: #1e3a5f;
-    margin-bottom: 12px;
+    margin-bottom: 8px;
     font-weight: 600;
 }
 
 .question-grid {
     display: grid;
     grid-template-columns: repeat(7, 1fr);
-    gap: 6px;
+    gap: 5px;
 }
 
 .question-btn {
-    width: 36px;
-    height: 36px;
+    width: 34px;
+    height: 34px;
     border: 2px solid #ff8c00;
     background-color: white;
     color: #333;
-    border-radius: 5px;
+    border-radius: 4px;
     cursor: pointer;
     font-weight: 600;
-    font-size: 13px;
+    font-size: 12px;
     transition: all 0.2s;
 }
 
@@ -438,8 +487,8 @@ body {
 
 /* Show Answer Section */
 .show-answer-section {
-    margin-top: 20px;
-    padding-top: 20px;
+    margin-top: 15px;
+    padding-top: 15px;
     border-top: 1px solid #dee2e6;
 }
 
@@ -447,14 +496,14 @@ body {
     background-color: #17a2b8;
     color: white;
     border: none;
-    padding: 10px 20px;
+    padding: 8px 16px;
     border-radius: 5px;
     cursor: pointer;
     font-size: 14px;
     font-weight: 600;
     transition: all 0.2s;
     width: 100%;
-    margin-bottom: 15px;
+    margin-bottom: 12px;
 }
 
 .show-answer-btn:hover {
@@ -464,15 +513,15 @@ body {
 /* Mobile Navigation Buttons (hidden by default) */
 .mobile-nav-buttons {
     display: none;
-    gap: 8px;
-    margin-bottom: 15px;
+    gap: 6px;
+    margin-bottom: 12px;
 }
 
 .mobile-nav-btn {
     flex: 1;
-    padding: 10px 12px;
+    padding: 8px 10px;
     border: none;
-    border-radius: 6px;
+    border-radius: 5px;
     font-size: 13px;
     font-weight: 600;
     cursor: pointer;
@@ -755,54 +804,195 @@ body {
 @media (max-width: 768px) {
     .exam-header {
         flex-direction: column;
-        gap: 15px;
+        gap: 10px;
+        padding: 12px 15px;
+    }
+    
+    .header-info h1 {
+        font-size: 16px;
     }
     
     .header-right {
         text-align: left;
+        font-size: 12px;
     }
     
     .title-bar {
         flex-direction: column;
-        gap: 10px;
+        gap: 8px;
         text-align: center;
+        padding: 12px 15px;
     }
     
-    .question-grid {
-        grid-template-columns: repeat(6, 1fr);
+    .title-bar h2 {
+        font-size: 18px;
+    }
+    
+    .timer-section {
+        flex-direction: column;
+        gap: 8px;
+        width: 100%;
+    }
+    
+    .timer {
+        width: 100%;
+        padding: 8px 15px;
+        font-size: 14px;
+    }
+    
+    .start-exam-btn {
+        width: 100%;
+        padding: 10px 20px;
+        font-size: 15px;
+    }
+    
+    .status-bar {
+        flex-direction: column;
+        gap: 8px;
+        text-align: center;
+        padding: 10px 15px;
+    }
+    
+    .status-content {
+        font-size: 12px;
+    }
+    
+    .main-content {
+        padding: 12px 15px;
+    }
+    
+    .theme-header {
+        gap: 8px;
+        margin-bottom: 12px;
+    }
+    
+    .theme-badge {
+        padding: 5px 12px;
+        font-size: 12px;
+    }
+    
+    .course-name {
+        font-size: 13px;
+    }
+    
+    .remember-btn {
+        padding: 4px 12px;
+        font-size: 12px;
+    }
+    
+    .marks-info {
+        font-size: 12px;
+    }
+    
+    .question-text {
+        font-size: 15px;
+        margin-bottom: 12px;
+        line-height: 1.4;
+    }
+    
+    .options-container {
+        gap: 8px;
+    }
+    
+    .option {
+        padding: 10px 12px;
+    }
+    
+    .option-radio {
+        width: 20px;
+        height: 20px;
+        margin-right: 10px;
+    }
+    
+    .option.selected .option-radio::after {
+        width: 10px;
+        height: 10px;
+    }
+    
+    .option-label {
+        font-size: 14px;
+    }
+    
+    .option-text {
+        font-size: 14px;
+    }
+    
+    .show-answer-section {
+        margin-top: 12px;
+        padding-top: 12px;
+    }
+    
+    .show-answer-btn {
+        padding: 8px 14px;
+        font-size: 13px;
+        margin-bottom: 10px;
+    }
+    
+    .mobile-nav-buttons {
         gap: 5px;
+        margin-bottom: 10px;
     }
     
-    .question-btn {
-        width: 32px;
-        height: 32px;
+    .mobile-nav-btn {
+        padding: 8px 8px;
         font-size: 12px;
     }
     
     .mobile-navigation-section {
-        padding: 12px;
+        padding: 8px;
+        margin: 8px 0;
     }
     
     .mobile-navigation-section h3 {
-        font-size: 14px;
-        margin-bottom: 10px;
+        font-size: 13px;
+        margin-bottom: 6px;
+    }
+    
+    .question-grid {
+        grid-template-columns: repeat(6, 1fr);
+        gap: 4px;
+    }
+    
+    .question-btn {
+        width: 30px;
+        height: 30px;
+        font-size: 11px;
+        border-width: 1.5px;
     }
     
     .navigation-buttons {
         flex-direction: column;
-        gap: 15px;
+        gap: 10px;
+        margin-top: 15px;
+        padding: 12px 0;
     }
     
     .nav-btn {
         min-width: 100%;
+        padding: 10px 20px;
+        font-size: 14px;
     }
     
     .question-info {
         order: -1;
         text-align: center;
-        padding: 10px;
+        padding: 8px;
         background-color: #f8f9fa;
         border-radius: 5px;
+        font-size: 14px;
+    }
+    
+    .credit-section {
+        margin-top: 15px;
+        padding: 12px;
+    }
+    
+    .prepared-by {
+        font-size: 18px;
+    }
+    
+    .credit-details {
+        font-size: 14px;
     }
     
     .submit-modal-content,

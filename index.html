@@ -1,0 +1,179 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Information System — Exit Exam</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <div class="exam-container">
+        <!-- Header -->
+        <div class="exam-header">
+            <div class="header-left">
+                <div class="logo-box">
+                    <div class="logo-text">MoEEE<br>Exit</div>
+                </div>
+                <div class="header-info">
+                    <h1>MoEEE — Ministry of Education Exit Exam Ethiopia</h1>
+                    <p class="website">exitexam.ethernet.edu.et</p>
+                </div>
+            </div>
+            <div class="header-right">
+                <p><strong>Full Name:</strong> <span id="studentName">Student Name</span> | <strong>Institution:</strong> <span id="institution">Your University</span></p>
+                <p><strong>University ID:</strong> <span id="universityId">NSR/0000/00</span> | <strong>Exam Center:</strong> <span id="examCenter">Your University</span></p>
+            </div>
+        </div>
+
+        <!-- Title Bar -->
+        <div class="title-bar">
+            <h2>Information System — Exit Exam</h2>
+            <div class="timer" id="timer">
+                <span class="timer-icon">⏱</span> Time left: <span id="timeDisplay">2:22:32</span>
+            </div>
+        </div>
+
+        <!-- Status Bar -->
+        <div class="status-bar" id="statusBar">
+            <span class="status-icon">✓</span> Exam Submitted — Your Score: <span id="score">7</span> / <span id="total">120</span> (<span id="percentage">5.8%</span>) | Answered: <span id="answered">9</span> / <span id="totalQuestions">120</span>
+        </div>
+
+        <!-- Main Content -->
+        <div class="main-content">
+            <!-- Question Section -->
+            <div class="question-section">
+                <div class="theme-header">
+                    <span class="theme-badge">Theme 1</span>
+                    <span class="course-name" id="courseName">Object Oriented Programming</span>
+                    <button class="remember-btn">Remember</button>
+                    <span class="marks-info">Marked out of 1.00</span>
+                </div>
+
+                <div class="question-container">
+                    <div class="question-text">
+                        <strong>Question <span id="questionNumber">9</span></strong> <span id="questionText">Which OOP concept allows a class to inherit properties and methods from another class?</span>
+                    </div>
+
+                    <div class="options-container" id="optionsContainer">
+                        <!-- Options will be dynamically inserted here -->
+                    </div>
+
+                    <!-- Show Answer Section -->
+                    <div class="show-answer-section">
+                        <button class="show-answer-btn" id="showAnswerBtn" onclick="toggleAnswer()">
+                            Show Answer & Explanation
+                        </button>
+                        
+                        <!-- Mobile Navigation Buttons (appears only on mobile) -->
+                        <div class="mobile-nav-buttons">
+                            <button class="mobile-nav-btn prev-btn" id="mobileePrevBtn" onclick="previousQuestion()">
+                                ◀ Previous
+                            </button>
+                            <button class="mobile-nav-btn next-btn" id="mobileNextBtn" onclick="nextQuestion()">
+                                Next ▶
+                            </button>
+                            <button class="mobile-nav-btn clear-btn" id="mobileClearBtn" onclick="clearAnswer()">
+                                Clear
+                            </button>
+                        </div>
+                        
+                        <div class="answer-explanation" id="answerExplanation" style="display: none;">
+                            <!-- Answer explanation will be shown here -->
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Mobile Navigation Section (appears here on mobile) -->
+                <div class="mobile-navigation-section">
+                    <h3>Exam Navigation</h3>
+                    <div class="question-grid" id="questionGridMobile">
+                        <!-- Question numbers will be dynamically inserted here -->
+                    </div>
+                </div>
+
+                <!-- Navigation Buttons -->
+                <div class="navigation-buttons">
+                    <button class="nav-btn prev-btn" id="prevBtn" onclick="previousQuestion()">
+                        ◀ Previous Question
+                    </button>
+                    <div class="question-info">
+                        <span>Question <span id="currentQuestionNum">1</span> of <span id="totalQuestions2">120</span></span>
+                    </div>
+                    <button class="nav-btn next-btn" id="nextBtn" onclick="nextQuestion()">
+                        Next Question ▶
+                    </button>
+                    <button class="nav-btn clear-btn" id="clearBtn" onclick="clearAnswer()">
+                        Clear Answer
+                    </button>
+                    <button class="nav-btn submit-btn" id="submitBtn" onclick="submitExam()">
+                        Submit Exam
+                    </button>
+                </div>
+
+                <!-- Credit Section -->
+                <div class="credit-section">
+                    <div class="prepared-by">Prepared by: Abdulmalik Nure</div>
+                    <div class="credit-details">4th Year Information Systems at Haramaya University</div>
+                </div>
+            </div>
+
+            <!-- Navigation Section -->
+            <div class="navigation-section">
+                <h3>Exam Navigation</h3>
+                <div class="question-grid" id="questionGrid">
+                    <!-- Question numbers will be dynamically inserted here -->
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Submit Confirmation Modal -->
+    <div id="submitModal" class="submit-modal">
+        <div class="submit-modal-content">
+            <h2>⚠️ Submit Exam?</h2>
+            <p id="submitMessage">You have answered <span id="answeredCount">0</span> out of 120 questions.</p>
+            <p id="unansweredWarning" style="color: #dc3545; font-weight: 600;"></p>
+            <p>Are you sure you want to submit your exam? This action cannot be undone.</p>
+            <div class="modal-buttons">
+                <button class="modal-btn cancel" onclick="closeSubmitModal()">Cancel</button>
+                <button class="modal-btn confirm" onclick="confirmSubmit()">Submit Exam</button>
+            </div>
+        </div>
+    </div>
+
+    <!-- Results Modal -->
+    <div id="resultsModal" class="results-modal">
+        <div class="results-modal-content">
+            <h2>🎉 Exam Completed!</h2>
+            <div class="score-display">
+                <span id="finalScore">0</span> / 120
+            </div>
+            <div class="score-details">
+                <h3>Your Performance</h3>
+                <div class="score-breakdown">
+                    <div class="score-item">
+                        <h4>Correct Answers</h4>
+                        <div class="value" id="correctCount">0</div>
+                    </div>
+                    <div class="score-item">
+                        <h4>Percentage</h4>
+                        <div class="value" id="percentageScore">0%</div>
+                    </div>
+                    <div class="score-item">
+                        <h4>Answered</h4>
+                        <div class="value" id="totalAnswered">0</div>
+                    </div>
+                    <div class="score-item">
+                        <h4>Unanswered</h4>
+                        <div class="value" id="totalUnanswered">0</div>
+                    </div>
+                </div>
+            </div>
+            <button class="modal-btn confirm" onclick="closeResultsModal()" style="margin-top: 15px;">Close</button>
+        </div>
+    </div>
+
+    <script src="questions.js"></script>
+    <script src="script.js"></script>
+</body>
+</html>

@@ -1,0 +1,17 @@
+{
+  "version": "0.2.0",
+  "configurations": [
+    {
+      "type": "chrome",
+      "request": "launch",
+      "name": "🚀 Launch Exit Exam",
+      "file": "${workspaceFolder}/START_HERE.html"
+    },
+    {
+      "type": "chrome",
+      "request": "launch",
+      "name": "🎯 Launch Exam Direct",
+      "file": "${workspaceFolder}/index.html"
+    }
+  ]
+}

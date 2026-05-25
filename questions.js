@@ -644,6 +644,7 @@ const questions = [
       "Something you do",
     ],
     answer: 2,
+    explanation: "Biometric authentication (fingerprint, facial recognition, iris scan) is 'something you are' - a physical characteristic unique to you. 'Something you know' is passwords/PINs, 'something you have' is tokens/cards, 'something you do' is behavioral patterns like typing rhythm."
   },
 
   // ─── THEME 3: Database and Information Management ─────────────────────────
@@ -654,148 +655,7 @@ const questions = [
     text: "Which SQL command is used to retrieve data from a database table?",
     options: ["INSERT", "UPDATE", "SELECT", "DELETE"],
     answer: 2,
-  },
-  {
-    id: 44, course: "Database Systems", theme: "Theme 3",
-    level: "Remember",
-    text: "What does ACID stand for in database transaction management?",
-    options: [
-      "Atomicity, Consistency, Isolation, Durability",
-      "Authentication, Consistency, Integration, Durability",
-      "Atomicity, Concurrency, Isolation, Data",
-      "Authentication, Concurrency, Integrity, Distribution",
-    ],
-    answer: 0,
-  },
-  {
-    id: 45, course: "Database Systems", theme: "Theme 3",
-    level: "Understanding",
-    text: "Which normal form eliminates partial dependencies — where a non-key attribute depends on only PART of a composite primary key?",
-    options: [
-      "First Normal Form (1NF)",
-      "Second Normal Form (2NF)",
-      "Third Normal Form (3NF)",
-      "Boyce-Codd Normal Form (BCNF)",
-    ],
-    answer: 1,
-  },
-  {
-    id: 46, course: "Database Systems", theme: "Theme 3",
-    level: "Understanding",
-    text: "In an Entity-Relationship (ER) diagram, what does a double rectangle represent?",
-    options: [
-      "Strong entity",
-      "Weak entity",
-      "Derived attribute",
-      "Multi-valued attribute",
-    ],
-    answer: 1,
-  },
-  {
-    id: 47, course: "Database Systems", theme: "Theme 3",
-    level: "Application",
-    text: "Which SQL clause is used to filter groups of records based on a condition AFTER the GROUP BY clause is applied?",
-    options: ["WHERE", "HAVING", "ORDER BY", "FILTER"],
-    answer: 1,
-  },
-  {
-    id: 48, course: "Database Systems", theme: "Theme 3",
-    level: "Analysis",
-    text: "A table contains StudentID, CourseID, StudentName, InstructorName, and InstructorOffice. The FDs are: StudentID→StudentName and InstructorName→InstructorOffice. What normalization violation does this represent?",
-    options: [
-      "1NF violation — multi-valued cells present",
-      "2NF violation — partial dependency exists",
-      "3NF violation — transitive dependency exists",
-      "BCNF violation only",
-    ],
-    answer: 2,
-  },
-  {
-    id: 49, course: "Database Systems", theme: "Theme 3",
-    level: "Understanding",
-    text: "Which type of SQL JOIN returns ALL records from the LEFT table and the matching records from the right table (NULL if no match)?",
-    options: ["INNER JOIN", "RIGHT JOIN", "LEFT JOIN", "FULL OUTER JOIN"],
-    answer: 2,
-  },
-  {
-    id: 50, course: "Database Systems", theme: "Theme 3",
-    level: "Analysis",
-    text: "Which concurrency problem occurs when a transaction reads data that has been modified but NOT yet committed by another transaction, which may later be rolled back?",
-    options: ["Lost update", "Dirty read", "Unrepeatable read", "Phantom read"],
-    answer: 1,
-  },
-
-  // Course 7: Information Storage and Retrieval (8 questions)
-  {
-    id: 51, course: "Information Storage & Retrieval", theme: "Theme 3",
-    level: "Remember",
-    text: "What is an inverted index in an information retrieval system?",
-    options: [
-      "A list of documents stored in reverse chronological order",
-      "A data structure that maps each unique term to the list of documents containing it",
-      "An index that stores documents in descending order of relevance",
-      "A compressed version of the document collection",
-    ],
-    answer: 1,
-  },
-  {
-    id: 52, course: "Information Storage & Retrieval", theme: "Theme 3",
-    level: "Remember",
-    text: "Which text pre-processing step removes very common, non-informative words such as 'the', 'is', and 'a' from documents before indexing?",
-    options: ["Stemming", "Tokenization", "Stop word removal", "Lemmatization"],
-    answer: 2,
-  },
-  {
-    id: 53, course: "Information Storage & Retrieval", theme: "Theme 3",
-    level: "Understanding",
-    text: "What does PRECISION measure in an information retrieval evaluation?",
-    options: [
-      "The fraction of ALL relevant documents that were retrieved",
-      "The fraction of RETRIEVED documents that are actually relevant",
-      "The total number of documents in the entire collection",
-      "The speed of the retrieval system in seconds",
-    ],
-    answer: 1,
-  },
-  {
-    id: 54, course: "Information Storage & Retrieval", theme: "Theme 3",
-    level: "Understanding",
-    text: "What is the purpose of TF-IDF weighting in information retrieval?",
-    options: [
-      "To compress document files for storage efficiency",
-      "To measure the importance of a term in a specific document relative to its frequency across the whole collection",
-      "To remove duplicate documents from the index",
-      "To translate natural language queries into SQL",
-    ],
-    answer: 1,
-  },
-  {
-    id: 55, course: "Information Storage & Retrieval", theme: "Theme 3",
-    level: "Application",
-    text: "An IR system retrieves 8 documents for a query. 6 of those retrieved documents are relevant. There are 10 relevant documents in total. What is the RECALL?",
-    options: ["0.75", "0.60", "0.80", "0.50"],
-    answer: 1,
-  },
-  {
-    id: 56, course: "Information Storage & Retrieval", theme: "Theme 3",
-    level: "Application",
-    text: "Using the same data from the previous question (8 retrieved, 6 relevant among retrieved, 10 total relevant), what is the PRECISION?",
-    options: ["0.60", "0.75", "0.80", "0.50"],
-    answer: 1,
-  },
-  {
-    id: 57, course: "Information Storage & Retrieval", theme: "Theme 3",
-    level: "Analysis",
-    text: "A search engine retrieves 100 documents. 40 are relevant. There are 200 relevant documents in the whole collection. What is the F1-score? (Precision=0.40, Recall=0.20)",
-    options: ["0.40", "0.20", "0.267", "0.533"],
-    answer: 2,
-  },
-  {
-    id: 58, course: "Information Storage & Retrieval", theme: "Theme 3",
-    level: "Understanding",
-    text: "Which information retrieval model represents both documents and queries as vectors in a multi-dimensional space and uses cosine similarity for ranking?",
-    options: ["Boolean model", "Probabilistic model", "Vector Space Model (VSM)", "Relational model"],
-    answer: 2,
+    explanation: "SELECT is the SQL command used to query and retrieve data from database tables. INSERT adds new records, UPDATE modifies existing records, and DELETE removes records."
   },
 
   // Course 8: Multimedia Information Systems (8 questions)

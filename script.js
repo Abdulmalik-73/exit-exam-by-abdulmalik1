@@ -262,12 +262,17 @@ function toggleAnswer() {
         const correctOption = String.fromCharCode(97 + question.answer);
         const correctText = question.options[question.answer];
         
-        // Create explanation (you can add more detailed explanations to questions data)
-        const explanation = question.explanation || "This is the correct answer based on the course material.";
+        // Get explanation or generate a meaningful one
+        let explanation = question.explanation;
+        
+        // If no explanation exists, create a contextual one based on the question
+        if (!explanation) {
+            explanation = `The correct answer is '${correctText}' because it accurately addresses the question about ${question.course.toLowerCase()}. This concept is fundamental to understanding ${question.theme}.`;
+        }
         
         answerDiv.innerHTML = `
             <div class="correct-answer">
-                <strong>Correct Answer: ${correctOption}. ${correctText}</strong>
+                <strong>✓ Correct Answer: ${correctOption}. ${correctText}</strong>
             </div>
             <div class="explanation-text">
                 <strong>Explanation:</strong> ${explanation}

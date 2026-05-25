@@ -8,6 +8,7 @@ const questions = [
     text: "Which of the following is a valid variable name in C++?",
     options: ["2student", "student_name", "student-name", "student name"],
     answer: 1,
+    explanation: "In C++, variable names must start with a letter or underscore, not a number. They can contain letters, digits, and underscores, but cannot contain hyphens or spaces. 'student_name' follows all these rules."
   },
   {
     id: 2, course: "Basic Computer Programming", theme: "Theme 1",
@@ -15,6 +16,7 @@ const questions = [
     text: "Which data type is used to store a single character in C++?",
     options: ["string", "char", "int", "bool"],
     answer: 1,
+    explanation: "The 'char' data type is specifically designed to store a single character in C++. It occupies 1 byte of memory and can hold any ASCII character."
   },
   {
     id: 3, course: "Basic Computer Programming", theme: "Theme 1",
@@ -22,6 +24,7 @@ const questions = [
     text: "What is the output of the following C++ code?\n  int x = 10;  x += 5;  cout << x;",
     options: ["10", "5", "15", "50"],
     answer: 2,
+    explanation: "The += operator adds the right operand to the left operand and assigns the result to the left operand. So x += 5 is equivalent to x = x + 5, which gives 10 + 5 = 15."
   },
   {
     id: 4, course: "Basic Computer Programming", theme: "Theme 1",
@@ -34,6 +37,7 @@ const questions = [
       "Do-while loop cannot have a condition",
     ],
     answer: 1,
+    explanation: "A do-while loop executes its body at least once before checking the condition, while a while loop checks the condition first and may never execute if the condition is initially false."
   },
   {
     id: 5, course: "Basic Computer Programming", theme: "Theme 1",
@@ -46,6 +50,7 @@ const questions = [
       "The absolute difference of two numbers",
     ],
     answer: 1,
+    explanation: "The modulus operator (%) returns the remainder after dividing the first operand by the second. For example, 7 % 3 returns 1 because 7 divided by 3 is 2 with a remainder of 1."
   },
   {
     id: 6, course: "Basic Computer Programming", theme: "Theme 1",
@@ -58,6 +63,7 @@ const questions = [
       "int[5] arr = {1, 2, 3, 4, 5};",
     ],
     answer: 0,
+    explanation: "The correct syntax for declaring and initializing an array in C++ is: datatype arrayName[size] = {values}. So 'int arr[5] = {1, 2, 3, 4, 5};' is the proper way."
   },
   {
     id: 7, course: "Basic Computer Programming", theme: "Theme 1",
@@ -65,6 +71,7 @@ const questions = [
     text: "What is the output of the following C++ code?\n  int a = 5, b = 3;  cout << a % b;",
     options: ["1", "2", "1.67", "5"],
     answer: 1,
+    explanation: "The modulus operator returns the remainder of integer division. 5 divided by 3 equals 1 with a remainder of 2, so a % b outputs 2."
   },
   {
     id: 8, course: "Basic Computer Programming", theme: "Theme 1",
@@ -72,6 +79,7 @@ const questions = [
     text: "Which file I/O mode flag in C++ adds content to the end of an existing file without deleting existing data?",
     options: ["ios::out", "ios::in", "ios::app", "ios::trunc"],
     answer: 2,
+    explanation: "The ios::app (append) mode opens a file for output and moves the write position to the end of the file, preserving existing content. ios::trunc would delete existing content, while ios::out overwrites from the beginning."
   },
 
   // Course 2: Object Oriented Programming (10 questions)
@@ -81,6 +89,7 @@ const questions = [
     text: "Which OOP concept allows a class to inherit properties and methods from another class?",
     options: ["Encapsulation", "Polymorphism", "Inheritance", "Abstraction"],
     answer: 2,
+    explanation: "Inheritance is the OOP concept that allows a class (child/derived class) to inherit properties and methods from another class (parent/base class), promoting code reusability."
   },
   {
     id: 10, course: "Object Oriented Programming", theme: "Theme 1",
@@ -88,6 +97,7 @@ const questions = [
     text: "What keyword is used in Java to call the constructor of the parent class from a subclass constructor?",
     options: ["this()", "parent()", "super()", "base()"],
     answer: 2,
+    explanation: "The super() keyword in Java is used to call the constructor of the parent class from a subclass constructor. It must be the first statement in the subclass constructor."
   },
   {
     id: 11, course: "Object Oriented Programming", theme: "Theme 1",
@@ -100,6 +110,7 @@ const questions = [
       "None of the above.",
     ],
     answer: 0,
+    explanation: "Superclass constructors are NOT inherited by subclasses in Java. Subclasses must explicitly call the superclass constructor using super(). A 'has-a' relationship is implemented through composition, not inheritance, and redefining a method with the same signature is called overriding, not overloading."
   },
   {
     id: 12, course: "Object Oriented Programming", theme: "Theme 1",
@@ -112,6 +123,7 @@ const questions = [
       "When a method is declared without a body in an abstract class",
     ],
     answer: 1,
+    explanation: "Method overloading occurs when multiple methods in the same class have the same name but different parameter lists (different number, type, or order of parameters). This is compile-time polymorphism."
   },
   {
     id: 13, course: "Object Oriented Programming", theme: "Theme 1",
@@ -119,6 +131,7 @@ const questions = [
     text: "Which access modifier makes a class member accessible ONLY within the class itself?",
     options: ["public", "protected", "private", "default"],
     answer: 2,
+    explanation: "The 'private' access modifier restricts access to class members only within the class itself. Public allows access from anywhere, protected allows access within the package and subclasses, and default allows access within the package."
   },
   {
     id: 14, course: "Object Oriented Programming", theme: "Theme 1",
@@ -131,6 +144,7 @@ const questions = [
       "Abstract classes are used exclusively for multiple inheritance.",
     ],
     answer: 0,
+    explanation: "Abstract classes can contain both abstract methods (without implementation) and concrete methods (with implementation), while traditional interfaces (before Java 8) could only have abstract methods. Abstract classes can also have instance variables and constructors."
   },
   {
     id: 15, course: "Object Oriented Programming", theme: "Theme 1",
@@ -143,6 +157,7 @@ const questions = [
       "A constructor cannot take parameters.",
     ],
     answer: 2,
+    explanation: "A constructor is automatically invoked when an object is instantiated using the 'new' keyword. Constructors have no return type (not even void), must have the same name as the class, and can accept parameters (parameterized constructors)."
   },
   {
     id: 16, course: "Object Oriented Programming", theme: "Theme 1",
@@ -150,6 +165,7 @@ const questions = [
     text: "What will be the output of the following Java code?\n  class Animal { void sound() { System.out.println(\"Animal\"); } }\n  class Dog extends Animal { void sound() { System.out.println(\"Dog\"); } }\n  Animal a = new Dog();  a.sound();",
     options: ["Animal", "Dog", "Compile error", "Runtime error"],
     answer: 1,
+    explanation: "This demonstrates runtime polymorphism (method overriding). Although the reference type is Animal, the actual object is Dog. Java uses dynamic method dispatch, so the overridden method in Dog class is called, printing 'Dog'."
   },
   {
     id: 17, course: "Object Oriented Programming", theme: "Theme 1",
@@ -162,6 +178,7 @@ const questions = [
       "Creating objects directly from abstract classes",
     ],
     answer: 1,
+    explanation: "Encapsulation is the OOP principle of bundling data (variables) and methods that operate on that data within a single unit (class), while hiding the internal implementation details and providing controlled access through public methods (getters/setters)."
   },
   {
     id: 18, course: "Object Oriented Programming", theme: "Theme 1",
@@ -174,6 +191,7 @@ const questions = [
       "add(int a, int b) and add(double a, int b)",
     ],
     answer: 1,
+    explanation: "Method overloading requires different parameter lists. add(int a, int b) and add(int b, int a) have the same parameter types in the same order, just with different parameter names. Parameter names alone don't distinguish overloaded methods - only the number, type, and order of parameters matter."
   },
 
   // Course 3: Internet Programming (8 questions)
@@ -188,6 +206,7 @@ const questions = [
       "High Transfer Machine Language",
     ],
     answer: 0,
+    explanation: "HTML stands for Hyper Text Markup Language. It is the standard markup language used to create and structure content on the web, defining elements like headings, paragraphs, links, and images."
   },
   {
     id: 20, course: "Internet Programming", theme: "Theme 1",
@@ -195,6 +214,7 @@ const questions = [
     text: "Which HTML tag is used to create a hyperlink?",
     options: ["<link>", "<href>", "<a>", "<url>"],
     answer: 2,
+    explanation: "The <a> (anchor) tag is used to create hyperlinks in HTML. The 'href' attribute specifies the URL destination. Example: <a href='https://example.com'>Click here</a>"
   },
   {
     id: 21, course: "Internet Programming", theme: "Theme 1",
@@ -207,6 +227,7 @@ const questions = [
       "GET is more secure than POST.",
     ],
     answer: 1,
+    explanation: "GET appends form data to the URL as query parameters (visible in the address bar), making it suitable for non-sensitive data. POST sends data in the HTTP request body (not visible in URL), making it more secure and suitable for sensitive information like passwords."
   },
   {
     id: 22, course: "Internet Programming", theme: "Theme 1",
@@ -219,6 +240,7 @@ const questions = [
       "Both sessions and cookies are stored on the client.",
     ],
     answer: 1,
+    explanation: "Sessions store data on the server side and use a session ID (stored in a cookie or URL) to identify users. Cookies store data directly on the client's browser. Sessions are more secure for sensitive data since the actual data never leaves the server."
   },
   {
     id: 23, course: "Internet Programming", theme: "Theme 1",
@@ -226,6 +248,7 @@ const questions = [
     text: "Which CSS property is used to change the text color of an HTML element?",
     options: ["font-color", "text-color", "color", "background-color"],
     answer: 2,
+    explanation: "The 'color' property in CSS is used to set the text color of an element. Example: color: red; or color: #FF0000; or color: rgb(255, 0, 0);. The 'background-color' property sets the background color, not text color."
   },
   {
     id: 24, course: "Internet Programming", theme: "Theme 1",

@@ -267,7 +267,7 @@ function toggleAnswer() {
         
         // If no explanation exists, create a contextual one based on the question
         if (!explanation) {
-            explanation = `The correct answer is '${correctText}' because it accurately addresses the question about ${question.course.toLowerCase()}. This concept is fundamental to understanding ${question.theme}.`;
+            explanation = `The correct answer is '${correctText}' because it accurately addresses the question about ${question.course.toLowerCase()}.`;
         }
         
         answerDiv.innerHTML = `

@@ -615,39 +615,8 @@ const questions = [
     answer: 2,
     explanation: "The Vector Space Model (VSM) represents documents and queries as vectors in a multi-dimensional space where each dimension corresponds to a term. Similarity is measured using cosine similarity between vectors. This allows for ranked retrieval, unlike the Boolean model which only returns exact matches."
   },
-      "Flooding a server with requests to make it unavailable",
-      "Observing and capturing data without altering it",
-      "Injecting malicious SQL code into a database query",
-    ],
-    answer: 2,
-  },
-  {
-    id: 41, course: "Information System Security", theme: "Theme 2",
-    level: "Understanding",
-    text: "What is the primary purpose of hashing in information security?",
-    options: [
-      "To encrypt data for secure network transmission",
-      "To verify data integrity by producing a fixed-size output that changes completely if data is altered",
-      "To compress data for faster network transmission",
-      "To dynamically assign IP addresses to network devices",
-    ],
-    answer: 1,
-  },
-  {
-    id: 42, course: "Information System Security", theme: "Theme 2",
-    level: "Understanding",
-    text: "To which authentication factor category does a fingerprint scan belong?",
-    options: [
-      "Something you know",
-      "Something you have",
-      "Something you are",
-      "Something you do",
-    ],
-    answer: 2,
-    explanation: "Biometric authentication (fingerprint, facial recognition, iris scan) is 'something you are' - a physical characteristic unique to you. 'Something you know' is passwords/PINs, 'something you have' is tokens/cards, 'something you do' is behavioral patterns like typing rhythm."
-  },
 
-  // ─── THEME 3: Database and Information Management ─────────────────────────
+  // Course 8: Multimedia Information Systems (8 questions)
   // Course 6: Database Systems (8 questions)
   {
     id: 43, course: "Database Systems", theme: "Theme 3",

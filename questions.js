@@ -618,14 +618,6 @@ const questions = [
 
   // Course 8: Multimedia Information Systems (8 questions)
   // Course 6: Database Systems (8 questions)
-  {
-    id: 43, course: "Database Systems", theme: "Theme 3",
-    level: "Remember",
-    text: "Which SQL command is used to retrieve data from a database table?",
-    options: ["INSERT", "UPDATE", "SELECT", "DELETE"],
-    answer: 2,
-    explanation: "SELECT is the SQL command used to query and retrieve data from database tables. INSERT adds new records, UPDATE modifies existing records, and DELETE removes records."
-  },
 
   // Course 8: Multimedia Information Systems (8 questions)
   {

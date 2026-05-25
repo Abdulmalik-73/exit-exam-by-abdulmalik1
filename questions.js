@@ -967,6 +967,7 @@ const questions = [
       "A and C are answers",
     ],
     answer: 1,
+    explanation: "Knowledge sharing systems help organizations increase customer satisfaction and retention by ensuring that customer-facing employees have access to the collective knowledge and best practices of the organization. This leads to better service, faster problem resolution, and improved customer experiences."
   },
   {
     id: 74, course: "Knowledge Management", theme: "Theme 4",
@@ -974,6 +975,7 @@ const questions = [
     text: "In the SECI model, which mode of knowledge conversion involves converting tacit knowledge into documented, explicit form through articles, diagrams, or manuals?",
     options: ["Socialization", "Externalization", "Combination", "Internalization"],
     answer: 1,
+    explanation: "Externalization is the process of converting tacit (personal, experiential) knowledge into explicit (documented, codified) knowledge through articulation in documents, manuals, diagrams, or procedures. Socialization shares tacit-to-tacit, Combination combines explicit-to-explicit, and Internalization converts explicit-to-tacit."
   },
   {
     id: 75, course: "Knowledge Management", theme: "Theme 4",
@@ -986,6 +988,7 @@ const questions = [
       "Tacit knowledge cannot exist in organizational settings.",
     ],
     answer: 1,
+    explanation: "Explicit knowledge is formal, codified, and easily documented (books, databases, procedures). Tacit knowledge is personal, context-specific, and difficult to formalize - it includes skills, experiences, insights, and intuition gained through practice. For example, riding a bicycle involves tacit knowledge that's hard to fully explain in words."
   },
   {
     id: 76, course: "Knowledge Management", theme: "Theme 4",
@@ -993,6 +996,7 @@ const questions = [
     text: "A master carpenter teaches an apprentice by working side by side with them every day, with the apprentice observing and imitating. Which SECI mode does this represent?",
     options: ["Externalization", "Combination", "Socialization", "Internalization"],
     answer: 2,
+    explanation: "Socialization is the process of sharing tacit knowledge through direct experience, observation, and practice. The apprentice learns tacit skills (how to hold tools, judge wood quality, sense when something is right) by working alongside the master, not through written instructions. This is tacit-to-tacit knowledge transfer."
   },
   {
     id: 77, course: "Knowledge Management", theme: "Theme 4",
@@ -1005,6 +1009,7 @@ const questions = [
       "Excellent IT infrastructure and knowledge management tools",
     ],
     answer: 2,
+    explanation: "The 'knowledge is power' mentality is a major barrier where employees hoard knowledge believing it gives them job security or competitive advantage. This prevents knowledge sharing and collaboration. Overcoming this requires organizational culture change, incentives for sharing, and leadership that values collaboration over individual knowledge hoarding."
   },
   {
     id: 78, course: "Knowledge Management", theme: "Theme 4",
@@ -1017,6 +1022,7 @@ const questions = [
       "Deployment",
     ],
     answer: 2,
+    explanation: "The Modeling phase in CRISP-DM (Cross-Industry Standard Process for Data Mining) involves selecting appropriate modeling techniques (classification, clustering, regression), building models, and tuning parameters. Business Understanding defines objectives, Data Preparation cleans data, and Deployment puts models into production."
   },
 
   // Course 11: Machine Learning (6 questions)
@@ -1031,6 +1037,7 @@ const questions = [
       "Self-supervised learning",
     ],
     answer: 2,
+    explanation: "Supervised learning uses labeled training data where each input has a corresponding correct output (label). The model learns to map inputs to outputs. Examples include classification (spam/not spam) and regression (predicting house prices). Unsupervised learning uses unlabeled data, reinforcement learning learns through rewards/penalties."
   },
   {
     id: 80, course: "Introduction to Machine Learning", theme: "Theme 4",
@@ -1043,6 +1050,7 @@ const questions = [
       "When a model is trained using an insufficient amount of data",
     ],
     answer: 2,
+    explanation: "Overfitting occurs when a model learns the training data too well, including noise and random fluctuations, rather than the underlying patterns. It performs excellently on training data but poorly on new, unseen test data because it has memorized rather than generalized. Solutions include regularization, more training data, and simpler models."
   },
   {
     id: 81, course: "Introduction to Machine Learning", theme: "Theme 4",
@@ -1055,6 +1063,7 @@ const questions = [
       "To artificially increase the training data size through augmentation",
     ],
     answer: 1,
+    explanation: "K-Fold cross-validation divides data into K subsets (folds). The model is trained K times, each time using K-1 folds for training and 1 fold for testing, rotating which fold is used for testing. This provides a more robust performance estimate by using all data for both training and validation, reducing variance in the evaluation."
   },
   {
     id: 82, course: "Introduction to Machine Learning", theme: "Theme 4",
@@ -1062,6 +1071,7 @@ const questions = [
     text: "A classification model is evaluated and gives: TP=90, FP=10, FN=20, TN=80. What is the PRECISION?",
     options: ["0.80", "0.82", "0.90", "0.75"],
     answer: 2,
+    explanation: "Precision = TP / (TP + FP) = 90 / (90 + 10) = 90 / 100 = 0.90 or 90%. Precision measures the accuracy of positive predictions - of all instances predicted as positive, what fraction were actually positive. High precision means few false positives."
   },
   {
     id: 83, course: "Introduction to Machine Learning", theme: "Theme 4",
@@ -1074,6 +1084,7 @@ const questions = [
       "Training the model for significantly more epochs",
     ],
     answer: 2,
+    explanation: "Both solutions combat overfitting: (A) More training data helps the model learn general patterns rather than memorizing, and dropout randomly disables neurons during training to prevent co-adaptation. (B) Simpler models with fewer parameters are less likely to memorize noise. Training for more epochs would actually worsen overfitting."
   },
   {
     id: 84, course: "Introduction to Machine Learning", theme: "Theme 4",
@@ -1086,6 +1097,7 @@ const questions = [
       "A support vector that defines the margin between clusters",
     ],
     answer: 1,
+    explanation: "A centroid is the center point of a cluster, calculated as the mean (average) of all data points assigned to that cluster. K-Means iteratively updates centroids by: (1) assigning points to nearest centroid, (2) recalculating centroids as the mean of assigned points, until convergence."
   },
 
   // ─── THEME 5: IS Development and Management ───────────────────────────────
@@ -1101,6 +1113,7 @@ const questions = [
       "ESS (Executive Support System)",
     ],
     answer: 3,
+    explanation: "ESS (Executive Support System) or EIS (Executive Information System) is designed for senior executives to support strategic, unstructured decision-making. It provides high-level summaries, external data, and drill-down capabilities. TPS handles transactions, MIS provides routine reports for middle management, DSS supports semi-structured decisions."
   },
   {
     id: 86, course: "Management of IS and Services", theme: "Theme 5",
@@ -1113,6 +1126,7 @@ const questions = [
       "G2C (Government-to-Citizen)",
     ],
     answer: 1,
+    explanation: "B2B (Business-to-Business) e-commerce involves transactions between businesses, such as manufacturers selling to wholesalers or suppliers selling to retailers. Examples include Alibaba and procurement systems. B2C is business-to-consumer (Amazon), C2C is consumer-to-consumer (eBay), G2C is government-to-citizen."
   },
   {
     id: 87, course: "Management of IS and Services", theme: "Theme 5",
@@ -1120,6 +1134,7 @@ const questions = [
     text: "Which information system processes high volumes of day-to-day business transactions such as ATM withdrawals, point-of-sale purchases, and payroll processing?",
     options: ["DSS", "ESS", "TPS", "MIS"],
     answer: 2,
+    explanation: "TPS (Transaction Processing System) handles routine, high-volume operational transactions that are essential for running the business. They are characterized by: high volume, repetitive processing, immediate processing, and accuracy requirements. Examples include ATM systems, airline reservations, and payroll systems."
   },
   {
     id: 88, course: "Management of IS and Services", theme: "Theme 5",
@@ -1132,6 +1147,7 @@ const questions = [
       "An Intranet uses the internet; an Extranet does not use any internet infrastructure.",
     ],
     answer: 1,
+    explanation: "An Intranet is a private network accessible only to an organization's employees, using internet technologies. An Extranet extends the intranet to allow controlled access to specific external parties like suppliers, customers, or partners. Both use internet protocols but with restricted access through firewalls and authentication."
   },
   {
     id: 89, course: "Management of IS and Services", theme: "Theme 5",
@@ -1139,6 +1155,7 @@ const questions = [
     text: "A company's CEO uses a real-time dashboard that aggregates data from multiple internal departments and external market sources to monitor Key Performance Indicators. Which IS does this best describe?",
     options: ["TPS", "MIS", "DSS", "ESS"],
     answer: 3,
+    explanation: "This describes an ESS (Executive Support System). The key indicators are: (1) used by CEO (executive level), (2) real-time dashboard, (3) aggregates data from multiple sources, (4) monitors KPIs for strategic oversight. ESS provides executives with easy access to internal and external information relevant to strategic goals."
   },
   {
     id: 90, course: "Management of IS and Services", theme: "Theme 5",
@@ -1151,6 +1168,7 @@ const questions = [
       "Product innovation strategy",
     ],
     answer: 1,
+    explanation: "Cost leadership strategy focuses on becoming the lowest-cost producer in the industry. Using IS to automate processes and optimize supply chains reduces operational costs, allowing the company to offer lower prices or achieve higher margins. Product differentiation focuses on unique features, focus strategy targets specific market segments."
   },
   {
     id: 91, course: "Management of IS and Services", theme: "Theme 5",
@@ -1158,6 +1176,7 @@ const questions = [
     text: "In Herbert Simon's model of organizational decision making, which phase involves identifying and DEFINING the problem that requires a decision?",
     options: ["Design phase", "Intelligence phase", "Choice phase", "Implementation phase"],
     answer: 1,
+    explanation: "Simon's decision-making model has four phases: (1) Intelligence - identifying and defining the problem, (2) Design - developing alternative solutions, (3) Choice - selecting the best alternative, (4) Implementation - executing the chosen solution. Intelligence is about problem recognition and understanding."
   },
   {
     id: 92, course: "Management of IS and Services", theme: "Theme 5",
@@ -1170,6 +1189,7 @@ const questions = [
       "The organization merges with a technology company to share IS infrastructure.",
     ],
     answer: 1,
+    explanation: "IS outsourcing involves contracting external service providers to handle some or all IT functions (development, maintenance, support, infrastructure). Organizations outsource to reduce costs, access specialized expertise, focus on core business, or improve service quality. Examples include cloud services, application development, and help desk support."
   },
   {
     id: 93, course: "Management of IS and Services", theme: "Theme 5",
@@ -1177,6 +1197,7 @@ const questions = [
     text: "A bank branch manager needs weekly summaries of loan approval rates, branch transaction volumes, and staff performance. Which IS would be MOST appropriate?",
     options: ["TPS", "MIS", "ESS", "OAS (Office Automation System)"],
     answer: 1,
+    explanation: "MIS (Management Information System) is most appropriate for middle managers who need routine, periodic reports summarizing operational data. MIS provides structured reports (weekly, monthly) from TPS data to support tactical decision-making. ESS is for executives, TPS handles transactions, OAS supports office tasks like email and documents."
   },
 
   // Course 13: IS Project Management (9 questions)
@@ -1191,6 +1212,7 @@ const questions = [
       "TE = (O + 3M + P) / 5",
     ],
     answer: 1,
+    explanation: "PERT (Program Evaluation and Review Technique) uses a weighted average: TE = (Optimistic + 4×Most Likely + Pessimistic) / 6. The Most Likely time is weighted 4 times more heavily because it's the most probable outcome. This formula accounts for uncertainty in activity duration estimates."
   },
   {
     id: 95, course: "IS Project Management", theme: "Theme 5",
@@ -1203,6 +1225,7 @@ const questions = [
       "Work Breakdown Structure (WBS)",
     ],
     answer: 2,
+    explanation: "The Project Charter is the document that formally authorizes a project, names the project manager, and grants authority to use organizational resources. It includes project objectives, high-level requirements, stakeholders, and success criteria. It's issued by the project sponsor or senior management."
   },
   {
     id: 96, course: "IS Project Management", theme: "Theme 5",
@@ -1210,6 +1233,7 @@ const questions = [
     text: "In Tuckman's model of team development, during which stage do conflicts emerge, power struggles occur, and team members challenge each other and the leader?",
     options: ["Forming", "Storming", "Norming", "Performing"],
     answer: 1,
+    explanation: "Tuckman's stages are: (1) Forming - team members meet and learn about the project, (2) Storming - conflicts and power struggles emerge as members assert themselves, (3) Norming - team establishes norms and cohesion, (4) Performing - team works efficiently toward goals. Storming is the conflict stage."
   },
   {
     id: 97, course: "IS Project Management", theme: "Theme 5",
@@ -1217,6 +1241,7 @@ const questions = [
     text: "A software development activity has: Optimistic time = 4 days, Most Likely = 7 days, Pessimistic = 16 days. What is the PERT expected duration?",
     options: ["7 days", "7.67 days", "8 days", "9 days"],
     answer: 2,
+    explanation: "Using PERT formula: TE = (O + 4M + P) / 6 = (4 + 4×7 + 16) / 6 = (4 + 28 + 16) / 6 = 48 / 6 = 8 days. The weighted average gives more importance to the most likely estimate while accounting for optimistic and pessimistic scenarios."
   },
   {
     id: 98, course: "IS Project Management", theme: "Theme 5",
@@ -1229,6 +1254,7 @@ const questions = [
       "The process of formally reducing scope to meet deadline constraints",
     ],
     answer: 1,
+    explanation: "Scope creep is the uncontrolled expansion of project scope through continuous addition of features or requirements without proper change control, budget increases, or timeline extensions. It's a major cause of project failure. Prevention requires formal change management processes and stakeholder agreement on scope changes."
   },
   {
     id: 99, course: "IS Project Management", theme: "Theme 5",
@@ -1241,6 +1267,7 @@ const questions = [
       "CV = 80,000 Birr (project is on track)",
     ],
     answer: 2,
+    explanation: "Cost Variance (CV) = Earned Value (EV) - Actual Cost (AC) = 80,000 - 100,000 = -20,000 Birr. A negative CV means the project is over budget - you've spent more (100,000) than the value of work completed (80,000). Positive CV means under budget, CV=0 means on budget."
   },
   {
     id: 100, course: "IS Project Management", theme: "Theme 5",
@@ -1248,6 +1275,7 @@ const questions = [
     text: "A project has tasks: A(3 days) → B(5 days) → D(4 days) is one path, and A(3 days) → C(2 days) → D(4 days) is another. D depends on BOTH B and C. What is the critical path duration?",
     options: ["7 days", "9 days", "12 days", "14 days"],
     answer: 2,
+    explanation: "Path 1: A→B→D = 3+5+4 = 12 days. Path 2: A→C→D = 3+2+4 = 9 days. The critical path is the longest path, which is 12 days (A→B→D). D cannot start until BOTH B and C are complete, so the project duration is determined by the longer path."
   },
   {
     id: 101, course: "IS Project Management", theme: "Theme 5",
@@ -1255,6 +1283,7 @@ const questions = [
     text: "Which risk response strategy involves CHANGING the project plan to completely ELIMINATE a threat?",
     options: ["Transfer", "Mitigate", "Accept", "Avoid"],
     answer: 3,
+    explanation: "Avoid strategy eliminates the risk by changing the project plan (e.g., using proven technology instead of new, risky technology). Transfer shifts risk to a third party (insurance, outsourcing). Mitigate reduces probability or impact. Accept acknowledges the risk without action. Avoidance is the only strategy that completely eliminates the threat."
   },
   {
     id: 102, course: "IS Project Management", theme: "Theme 5",
@@ -1267,6 +1296,7 @@ const questions = [
       "To document the communication plan for all project stakeholders",
     ],
     answer: 1,
+    explanation: "WBS (Work Breakdown Structure) hierarchically decomposes the total project scope into smaller, manageable components called work packages. It organizes and defines the total scope, making it easier to estimate, schedule, and assign work. The WBS is the foundation for project planning - it answers 'what' needs to be done, not 'when' (Gantt chart) or 'what risks' exist."
   },
 
   // Course 14: Enterprise Systems (8 questions)
@@ -1281,6 +1311,7 @@ const questions = [
       "Pilot implementation",
     ],
     answer: 2,
+    explanation: "Big bang implementation switches the entire organization to the new ERP system at once on a specific date. It's high-risk but fast. Phased rollout implements modules gradually, parallel running operates both systems simultaneously, pilot implementation tests in one location first. Big bang requires extensive preparation and has no fallback."
   },
   {
     id: 104, course: "Enterprise Systems", theme: "Theme 5",
@@ -1293,6 +1324,7 @@ const questions = [
       "Electronic Resource Programming",
     ],
     answer: 0,
+    explanation: "ERP stands for Enterprise Resource Planning. It's an integrated software system that manages and coordinates all business processes and data across an organization (finance, HR, manufacturing, supply chain, sales) using a single, shared database. This eliminates data silos and provides real-time information flow."
   },
   {
     id: 105, course: "Enterprise Systems", theme: "Theme 5",
@@ -1305,6 +1337,7 @@ const questions = [
       "Security vulnerabilities in enterprise network infrastructure",
     ],
     answer: 1,
+    explanation: "The silo problem occurs when departments use separate, incompatible systems that don't communicate. This leads to data inconsistency, duplication, delays, and lack of real-time visibility. ERP solves this by integrating all departments into one system with a shared database, enabling real-time data flow and consistency across the organization."
   },
   {
     id: 106, course: "Enterprise Systems", theme: "Theme 5",
@@ -1317,6 +1350,7 @@ const questions = [
       "Using the big bang go-live strategy instead of phased rollout",
     ],
     answer: 1,
+    explanation: "Lack of top management commitment and poor change management are the leading causes of ERP failure. ERP requires significant organizational change - new processes, roles, and ways of working. Without executive support, adequate training, and managing resistance to change, even technically sound implementations fail. Technical issues are usually manageable if organizational factors are addressed."
   },
   {
     id: 107, course: "Enterprise Systems", theme: "Theme 5",
@@ -1329,6 +1363,7 @@ const questions = [
       "Pilot implementation strategy",
     ],
     answer: 2,
+    explanation: "Phased rollout (or phased implementation) deploys the ERP system gradually, one module or department at a time. This reduces risk, allows learning from each phase, and spreads the workload. Big bang switches everything at once, parallel runs both systems simultaneously, pilot tests in one location before full rollout."
   },
   {
     id: 108, course: "Enterprise Systems", theme: "Theme 5",
@@ -1336,6 +1371,7 @@ const questions = [
     text: "Which ERP vendor is recognized as the WORLD'S LARGEST ERP provider by revenue, offering the SAP S/4HANA product?",
     options: ["Oracle", "Microsoft", "SAP", "Odoo"],
     answer: 2,
+    explanation: "SAP is the world's largest ERP vendor by revenue, with its flagship product SAP S/4HANA. SAP dominates the enterprise market, especially for large corporations. Oracle and Microsoft are also major players. Odoo is an open-source ERP popular with small-to-medium businesses."
   },
   {
     id: 109, course: "Enterprise Systems", theme: "Theme 5",
@@ -1348,6 +1384,7 @@ const questions = [
       "To handle all financial reporting, accounting, and budgeting",
     ],
     answer: 1,
+    explanation: "MRP (Material Requirements Planning) calculates material requirements for production. Based on the master production schedule, bill of materials, and inventory levels, MRP determines what materials to order, how much, and when, ensuring materials arrive just in time for production while minimizing inventory costs."
   },
   {
     id: 110, course: "Enterprise Systems", theme: "Theme 5",
@@ -1360,6 +1397,7 @@ const questions = [
       "Odoo",
     ],
     answer: 3,
+    explanation: "Odoo is the most appropriate choice. It's open-source (free community edition), affordable, has a large community for support, and is suitable for small-to-medium businesses. SAP, Oracle, and Microsoft are enterprise-grade solutions with high licensing costs, implementation expenses, and complexity that may be excessive for a medium-sized company with limited budget."
   },
 
   // Course 15: System Analysis and Design (10 questions)
@@ -1374,6 +1412,7 @@ const questions = [
       "Activity diagram",
     ],
     answer: 2,
+    explanation: "Sequence diagrams show object interactions over time, with objects arranged horizontally and time flowing vertically downward. Messages (method calls) are shown as arrows between objects. They're used to model specific scenarios and understand the flow of control. Class diagrams show structure, use case diagrams show functionality, activity diagrams show workflows."
   },
   {
     id: 112, course: "System Analysis & Design", theme: "Theme 5",
@@ -1381,6 +1420,7 @@ const questions = [
     text: "Which SDLC methodology is characterized by short, iterative development cycles called 'sprints,' high user involvement, and adapting to changing requirements?",
     options: ["Waterfall", "Spiral", "Agile (Scrum)", "V-Model"],
     answer: 2,
+    explanation: "Agile (specifically Scrum) uses short iterations (sprints, typically 2-4 weeks), continuous user feedback, and embraces changing requirements. Waterfall is sequential with fixed requirements, Spiral combines iterative development with risk analysis, V-Model emphasizes testing at each development stage. Agile prioritizes working software and customer collaboration."
   },
   {
     id: 113, course: "System Analysis & Design", theme: "Theme 5",
@@ -1393,6 +1433,7 @@ const questions = [
       "A use case can be extended or replaced in future system versions.",
     ],
     answer: 1,
+    explanation: "<<include>> means one use case always and mandatorily includes the behavior of another use case. For example, 'Process Order' might <<include>> 'Validate Payment' - you can't process an order without validating payment. <<extend>> is optional and conditional. <<include>> promotes reuse of common functionality."
   },
   {
     id: 114, course: "System Analysis & Design", theme: "Theme 5",
@@ -1405,6 +1446,7 @@ const questions = [
       "Non-functional requirements are optional and are typically not formally tested.",
     ],
     answer: 1,
+    explanation: "Functional requirements specify WHAT the system does - features, functions, and behaviors (e.g., 'system shall allow users to login'). Non-functional requirements specify HOW WELL it performs - quality attributes like performance, security, usability, reliability (e.g., 'system shall respond within 2 seconds'). Both are critical and testable."
   },
   {
     id: 115, course: "System Analysis & Design", theme: "Theme 5",
@@ -1417,6 +1459,7 @@ const questions = [
       "A Join node (synchronizing and ending parallel flows)",
     ],
     answer: 2,
+    explanation: "A Fork node (thick bar with one input, multiple outputs) splits the flow into concurrent parallel paths that execute simultaneously. For example, after placing an order, the system might fork to: (1) process payment, (2) update inventory, (3) send confirmation email - all happening in parallel. A Join node (multiple inputs, one output) synchronizes parallel flows."
   },
   {
     id: 116, course: "System Analysis & Design", theme: "Theme 5",
@@ -1429,6 +1472,7 @@ const questions = [
       "A Join node",
     ],
     answer: 1,
+    explanation: "A Merge node (diamond with multiple inputs, one output) combines multiple conditional branches back into a single flow. It's the opposite of a Decision node (one input, multiple outputs based on conditions). Merge doesn't evaluate conditions - it simply reunites paths that were previously split by a decision."
   },
   {
     id: 117, course: "System Analysis & Design", theme: "Theme 5",
@@ -1441,6 +1485,7 @@ const questions = [
       "High coupling only — the module has too many dependencies",
     ],
     answer: 2,
+    explanation: "This demonstrates LOW COHESION - the module performs multiple unrelated functions (login, database, PDF, email). Good design requires high cohesion (module does one thing well) and low coupling (minimal dependencies). This module should be split into separate, focused classes: AuthenticationService, DatabaseService, ReportGenerator, EmailService."
   },
   {
     id: 118, course: "System Analysis & Design", theme: "Theme 5",
@@ -1453,6 +1498,7 @@ const questions = [
       "Prototype model",
     ],
     answer: 2,
+    explanation: "The Spiral model is risk-driven and iterative. Each spiral loop has four phases: (1) Determine objectives, (2) Identify and resolve risks, (3) Development and testing, (4) Plan next iteration. Risk analysis is performed in every cycle before proceeding. It's ideal for large, complex, high-risk projects. Waterfall is sequential, Agile focuses on flexibility, Prototype focuses on user feedback."
   },
   {
     id: 119, course: "System Analysis & Design", theme: "Theme 5",
@@ -1465,6 +1511,7 @@ const questions = [
       "A system constraint — it is an external limitation",
     ],
     answer: 1,
+    explanation: "This is a NON-FUNCTIONAL REQUIREMENT specifically related to performance/scalability. It doesn't describe WHAT the system does (functional), but HOW WELL it performs under load. Non-functional requirements specify quality attributes: performance, security, usability, reliability, scalability. They're measurable and testable (5,000 concurrent users is a specific, testable criterion)."
   },
   {
     id: 120, course: "System Analysis & Design", theme: "Theme 5",
@@ -1477,6 +1524,7 @@ const questions = [
       "Prototype model — build quickly and refine",
     ],
     answer: 1,
+    explanation: "The Spiral model is most appropriate because: (1) It's risk-driven with dedicated risk analysis in each cycle - critical for high-risk banking projects, (2) It's iterative, allowing requirements to be refined over time, (3) It emphasizes documentation and planning needed for regulatory compliance. Waterfall is too rigid for unclear requirements, Agile may lack sufficient documentation for compliance, Prototype is too informal for banking."
   },
 ];
 

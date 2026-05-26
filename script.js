@@ -174,6 +174,25 @@ function displayQuestion(index) {
         };
         themeBadge.style.backgroundColor = themeColors[question.theme] || '#0066ff';
     }
+
+    // Update cognitive level (Remember button)
+    const rememberBtn = document.querySelector('.remember-btn');
+    if (rememberBtn) {
+        rememberBtn.textContent = question.level;
+        // Change color based on cognitive level
+        const levelColors = {
+            'Remember':      { bg: '#ffffff', color: '#0066ff', border: '#0066ff' },
+            'Understanding': { bg: '#ffffff', color: '#28a745', border: '#28a745' },
+            'Application':   { bg: '#ffffff', color: '#e65c00', border: '#e65c00' },
+            'Analysis':      { bg: '#ffffff', color: '#6f42c1', border: '#6f42c1' },
+            'Evaluation':    { bg: '#ffffff', color: '#dc3545', border: '#dc3545' },
+            'Creation':      { bg: '#ffffff', color: '#17a2b8', border: '#17a2b8' },
+        };
+        const style = levelColors[question.level] || levelColors['Remember'];
+        rememberBtn.style.backgroundColor = style.bg;
+        rememberBtn.style.color = style.color;
+        rememberBtn.style.borderColor = style.border;
+    }
     
     // Display options
     const optionsContainer = document.getElementById('optionsContainer');

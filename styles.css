@@ -185,6 +185,7 @@ body {
     border-radius: 4px;
     font-weight: 600;
     font-size: 13px;
+    transition: background-color 0.3s ease;
 }
 
 .course-name {

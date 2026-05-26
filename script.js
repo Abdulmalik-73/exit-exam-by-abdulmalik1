@@ -160,6 +160,21 @@ function displayQuestion(index) {
     // Update course name
     document.getElementById('courseName').textContent = question.course;
     
+    // Update theme badge based on question's theme
+    const themeBadge = document.querySelector('.theme-badge');
+    if (themeBadge) {
+        themeBadge.textContent = question.theme;
+        // Change badge color per theme
+        const themeColors = {
+            'Theme 1': '#0066ff',
+            'Theme 2': '#e65c00',
+            'Theme 3': '#28a745',
+            'Theme 4': '#6f42c1',
+            'Theme 5': '#dc3545'
+        };
+        themeBadge.style.backgroundColor = themeColors[question.theme] || '#0066ff';
+    }
+    
     // Display options
     const optionsContainer = document.getElementById('optionsContainer');
     optionsContainer.innerHTML = '';

@@ -212,9 +212,9 @@ const questions = [
     id: 20, course: "Internet Programming", theme: "Theme 1",
     level: "Remember",
     text: "Which HTML tag is used to create a hyperlink?",
-    options: ["<link>", "<href>", "<a>", "<url>"],
+    options: ["&lt;link&gt;", "&lt;href&gt;", "&lt;a&gt;", "&lt;url&gt;"],
     answer: 2,
-    explanation: "The <a> (anchor) tag is used to create hyperlinks in HTML. The 'href' attribute specifies the URL destination. Example: <a href='https://example.com'>Click here</a>"
+    explanation: "The &lt;a&gt; (anchor) tag is used to create hyperlinks in HTML. The 'href' attribute specifies the URL destination. Example: &lt;a href='https://example.com'&gt;Click here&lt;/a&gt;"
   },
   {
     id: 21, course: "Internet Programming", theme: "Theme 1",
